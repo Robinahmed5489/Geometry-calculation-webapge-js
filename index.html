@@ -37,15 +37,19 @@
       </div>
     </header>
     <section class="main">
-      <div class="container mx-auto flex flex-col md:flex-row">
+      <div class="container mx-auto flex flex-col md:flex-row gap-5">
         <!-- all geometry card section  -->
         <div
           class="geometry-section flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"
         >
           <!-- triangle card  -->
-          <div class="card w-96 bg-base-100 border">
+          <div class="card w-auto bg-base-100 border">
             <figure class="px-10 pt-10">
-              <img src="images/triangle.png" alt="Shoes" class="rounded-xl" />
+              <img
+                src="images/triangle.png"
+                alt="Shoes"
+                class="rounded-xl w-full h-[194px]"
+              />
             </figure>
             <div class="card-body items-center text-center space-y-2">
               <h2 class="card-title text-2xl">Triangle</h2>
@@ -74,6 +78,96 @@
               <div class="card-actions w-full">
                 <button
                   onclick="calculateTriangleArea()"
+                  class="w-full px-4 py-3 bg-indigo-600 text-white rounded-md"
+                >
+                  Calculate
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Rectangle card  -->
+          <div class="card w-auto bg-base-100 border">
+            <figure class="px-10 pt-10">
+              <img
+                src="images/rectangle.png"
+                alt="Shoes"
+                class="rounded-xl w-full h-[194px]"
+              />
+            </figure>
+            <div class="card-body items-center text-center space-y-2">
+              <h2 class="card-title text-2xl">Rectangle</h2>
+              <p>Area (A) = W X L</p>
+              <div class="calculation text-lg">
+                <input
+                  type="text"
+                  id="rectangle-width"
+                  class="w-16 bg-gray-200 p-0.5 px-2"
+                  placeholder="W"
+                />
+                &nbsp; cm &nbsp; &nbsp;
+                <input
+                  type="text"
+                  id="rectangle-length"
+                  class="w-16 bg-gray-200 p-0.5 px-2"
+                  placeholder="L"
+                />
+                &nbsp; cm
+              </div>
+              <div class="result-area">
+                <p>
+                  Area: <span id="rectangle-update-area">0</span> cm<sup>2</sup>
+                </p>
+              </div>
+              <div class="card-actions w-full">
+                <button
+                  onclick="calculateRectangleArea()"
+                  class="w-full px-4 py-3 bg-indigo-600 text-white rounded-md"
+                >
+                  Calculate
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Parallelogram card  -->
+          <div class="card w-auto bg-base-100 border">
+            <figure class="px-10 pt-10">
+              <img
+                src="images/parallelogram.png"
+                alt="Shoes"
+                class="rounded-xl w-full h-[194px]"
+              />
+            </figure>
+            <div class="card-body items-center text-center space-y-2">
+              <h2 class="card-title text-2xl">Parallelogram</h2>
+              <p>Area (A) = W X L</p>
+              <div class="calculation text-lg">
+                <input
+                  type="text"
+                  id="Parallelogram-base"
+                  class="w-16 bg-gray-200 p-0.5 px-2"
+                  placeholder="b"
+                />
+                &nbsp; cm &nbsp; &nbsp;
+                <input
+                  type="text"
+                  id="Parallelogram-height"
+                  class="w-16 bg-gray-200 p-0.5 px-2"
+                  placeholder="h"
+                />
+                &nbsp; cm
+              </div>
+              <div class="result-area">
+                <p>
+                  Area: <span id="Parallelogram-update-area">0</span> cm<sup
+                    >2</sup
+                  >
+                </p>
+              </div>
+              <div class="card-actions w-full">
+                <button
+                  onclick="calculateParallelogramArea()"
                   class="w-full px-4 py-3 bg-indigo-600 text-white rounded-md"
                 >
                   Calculate
