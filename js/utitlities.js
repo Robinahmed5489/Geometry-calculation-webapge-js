@@ -14,7 +14,7 @@ function setData(targetId, value) {
   targetElementTag.innerText = value;
 }
 function setEntryDataUnit(targetId) {
-  const targetElementTag = document.getElementById("unit");
+  const targetElementTag = document.getElementById(targetId);
   targetElementTag.innerText = "m";
 }
 

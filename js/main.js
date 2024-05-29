@@ -8,6 +8,7 @@ function calculateTriangleArea() {
   const triangleArea = 0.5 * triangleBaseValue * triangleHeightValue;
   const triangleAreaThreeDecimal = triangleArea.toFixed(3);
   setData("triangle-update-area", triangleAreaThreeDecimal);
+  areaCalculationEntry("Triangle", triangleAreaThreeDecimal);
 }
 // rectabgle
 
@@ -21,6 +22,7 @@ function calculateRectangleArea() {
   const rectangleArea = RectangleWidthValue * RectangleHeightValue;
   const RectangleAreaThreeDecimal = rectangleArea.toFixed(3);
   setData("rectangle-update-area", RectangleAreaThreeDecimal);
+  areaCalculationEntry("rectangle", RectangleAreaThreeDecimal);
 }
 // Parallelogram
 function calculateParallelogramArea() {
@@ -33,6 +35,7 @@ function calculateParallelogramArea() {
   const ParallelogramArea = ParallelogramBaseValue * ParallelogramHeightValue;
   const ParallelogramAreaThreeDecimal = ParallelogramArea.toFixed(3);
   setData("Parallelogram-update-area", ParallelogramAreaThreeDecimal);
+  areaCalculationEntry("Parallelogram", ParallelogramAreaThreeDecimal);
 }
 // Rhombus
 
@@ -46,6 +49,7 @@ function calculateRhombusArea() {
   const RhombusArea = 0.5 * RhombusD1Value * RhombusD2Value;
   const RhombusAreaThreeDecimal = RhombusArea.toFixed(3);
   setData("Rhombus-update-area", RhombusAreaThreeDecimal);
+  areaCalculationEntry("Rhombus", RhombusAreaThreeDecimal);
 }
 
 // Pentagon
@@ -80,4 +84,11 @@ function Convert() {
   const newValueTwoDecimal = newValue.toFixed(4);
   setData("value", newValueTwoDecimal);
   setEntryDataUnit("unit");
+  const span1 = document.getElementById("value");
+  const span2 = document.getElementById("unit");
+  if (span1 && span2) {
+    span1.id = "ZERO3";
+    span2.id = "ZERO3";
+    return;
+  }
 }
