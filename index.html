@@ -175,10 +175,149 @@
               </div>
             </div>
           </div>
+
+          <!-- Rhombus card  -->
+          <div class="card w-auto bg-base-100 border">
+            <figure class="px-10 pt-10">
+              <img
+                src="images/rhombus.png"
+                alt="Shoes"
+                class="rounded-xl w-full h-[194px]"
+              />
+            </figure>
+            <div class="card-body items-center text-center space-y-2">
+              <h2 class="card-title text-2xl">Rhombus</h2>
+              <p>Area (A) = 0.5 X d<sub>1</sub> X d<sub>2</sub></p>
+              <div class="calculation text-lg">
+                <input
+                  type="text"
+                  id="Rhombus-d1"
+                  class="w-16 bg-gray-200 p-0.5 px-2"
+                  placeholder="d1"
+                />
+                &nbsp; cm &nbsp; &nbsp;
+                <input
+                  type="text"
+                  id="Rhombus-d2"
+                  class="w-16 bg-gray-200 p-0.5 px-2"
+                  placeholder="d2"
+                />
+                &nbsp; cm
+              </div>
+              <div class="result-area">
+                <p>
+                  Area: <span id="Rhombus-update-area">0</span> cm<sup>2</sup>
+                </p>
+              </div>
+              <div class="card-actions w-full">
+                <button
+                  onclick="calculateRhombusArea()"
+                  class="w-full px-4 py-3 bg-indigo-600 text-white rounded-md"
+                >
+                  Calculate
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pentagon card  -->
+          <div class="card w-auto bg-base-100 border">
+            <figure class="px-10 pt-10">
+              <img
+                src="images/pentagon.png"
+                alt="Shoes"
+                class="rounded-xl w-full h-[194px]"
+              />
+            </figure>
+            <div class="card-body items-center text-center space-y-2">
+              <h2 class="card-title text-2xl">Pentagon</h2>
+              <p>Area (A) = 0.5 X p X b</p>
+              <div class="calculation text-lg">
+                <input
+                  type="text"
+                  id="Pentagon-p"
+                  class="w-16 bg-gray-200 p-0.5 px-2"
+                  placeholder="p"
+                />
+                &nbsp; cm &nbsp; &nbsp;
+                <input
+                  type="text"
+                  id="Pentagon-b"
+                  class="w-16 bg-gray-200 p-0.5 px-2"
+                  placeholder="b"
+                />
+                &nbsp; cm
+              </div>
+              <div class="result-area">
+                <p>
+                  Area: <span id="Pentagon-update-area">0</span> cm<sup>2</sup>
+                </p>
+              </div>
+              <div class="card-actions w-full">
+                <button
+                  onclick="calculatePentagonArea()"
+                  class="w-full px-4 py-3 bg-indigo-600 text-white rounded-md"
+                >
+                  Calculate
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Ellipse card  -->
+          <div class="card w-auto bg-base-100 border">
+            <figure class="px-10 pt-10">
+              <img
+                src="images/ellipse.png"
+                alt="Shoes"
+                class="rounded-xl w-full h-[194px]"
+              />
+            </figure>
+            <div class="card-body items-center text-center space-y-2">
+              <h2 class="card-title text-2xl">Ellipse</h2>
+              <p>Area (A) = &pi;ab</p>
+              <div class="calculation text-lg">
+                <input
+                  type="text"
+                  id="Ellipse-a-radius"
+                  class="w-16 bg-gray-200 p-0.5 px-2"
+                  placeholder="a"
+                />
+                &nbsp; cm &nbsp; &nbsp;
+                <input
+                  type="text"
+                  id="Ellipse-b-radius"
+                  class="w-16 bg-gray-200 p-0.5 px-2"
+                  placeholder="b"
+                />
+                &nbsp; cm
+              </div>
+              <div class="result-area">
+                <p>
+                  Area: <span id="Ellipse-update-area">0</span> cm<sup>2</sup>
+                </p>
+              </div>
+              <div class="card-actions w-full">
+                <button
+                  onclick="calculateEllipseArea()"
+                  class="w-full px-4 py-3 bg-indigo-600 text-white rounded-md"
+                >
+                  Calculate
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
 
         <!-- calculation entry section  -->
-        <div class="calculation-entry-section w-72 h-80 border"></div>
+        <div
+          class="calculation-entry-section w-10/12 mx-auto sm:w-64 h-72 border"
+        >
+          <h1 class="text-2xl text-center my-4 font-semibold">
+            <u>Area Calculations</u>
+          </h1>
+          <div id="entries" class="text-lg text-center"></div>
+        </div>
       </div>
     </section>
 
