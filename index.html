@@ -11,50 +11,84 @@
       type="text/css"
     />
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/style.css" />
   </head>
   <body>
-    <header>
-      <div class="navbar bg-base-100">
-        <div class="navbar-start">
-          <div class="dropdown">
-            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-5 w-5"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M4 6h16M4 12h8m-8 6h16"
-                />
-              </svg>
-            </div>
-            <ul
-              tabindex="0"
-              class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+    <header class="my-6">
+      <div class="container mx-auto">
+        <div class="navbar bg-[#E7F4FB] p-4">
+          <div class="navbar-start">
+            <a class="text-xl"
+              ><span class="font-bold text-3xl">Interactive</span> <br />
+              <span class="font-light">Geometry Genius</span></a
             >
-              <li><a>Item 1</a></li>
-              <li>
-                <a>Parent</a>
-                <ul class="p-2">
-                  <li><a>Submenu 1</a></li>
-                  <li><a>Submenu 2</a></li>
-                </ul>
-              </li>
-              <li><a>Item 3</a></li>
-            </ul>
           </div>
-          <a class="btn btn-ghost text-xl">daisyUI</a>
-        </div>
 
-        <div class="navbar-end">
-          <a class="btn">Button</a>
+          <div class="navbar-end">
+            <a class="btn btn-info text-white px-6">Blog</a>
+          </div>
         </div>
       </div>
     </header>
+    <section class="main">
+      <div class="container mx-auto flex flex-col md:flex-row">
+        <!-- all geometry card section  -->
+        <div
+          class="geometry-section flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"
+        >
+          <!-- triangle card  -->
+          <div class="card w-96 bg-base-100 border">
+            <figure class="px-10 pt-10">
+              <img src="images/triangle.png" alt="Shoes" class="rounded-xl" />
+            </figure>
+            <div class="card-body items-center text-center space-y-2">
+              <h2 class="card-title text-2xl">Triangle</h2>
+              <p>Area (A) = 0.5 X b X h</p>
+              <div class="calculation text-lg">
+                <input
+                  type="text"
+                  id="triangle-base"
+                  class="w-16 bg-gray-200 p-0.5 px-2"
+                  placeholder="b"
+                />
+                &nbsp; cm &nbsp; &nbsp;
+                <input
+                  type="text"
+                  id="triangle-height"
+                  class="w-16 bg-gray-200 p-0.5 px-2"
+                  placeholder="h"
+                />
+                &nbsp; cm
+              </div>
+              <div class="result-areaq">
+                <p>
+                  Area: <span id="triangle-update-area">0</span> cm<sup>2</sup>
+                </p>
+              </div>
+              <div class="card-actions w-full">
+                <button
+                  onclick="calculateTriangleArea()"
+                  class="w-full px-4 py-3 bg-indigo-600 text-white rounded-md"
+                >
+                  Calculate
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- calculation entry section  -->
+        <div class="calculation-entry-section w-72 h-80 border"></div>
+      </div>
+    </section>
+
+    <script src="js/utitlities.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>
